@@ -16,7 +16,7 @@ Working with a GraphQL API on the frontend is a great opportunity to develop new
 - caching
 - validating and optimizing queries based on the schema
 
-Of course, nothing stops you from using plain HTTP to fetch your data and then shifting all the bits yourself until the right information ends up in your UI. But GraphQL provides the ability to abstract away a lot of the manual work you'd usually have to do during that process and lets you focus on the real important parts of your app! In the following, we'll discuss in a bit more detail what these tasks are.
+Of course, nothing stops you from using plain HTTP to fetch your data and then shifting all the bits yourself until the right information ends up in your User Interface (UI). But GraphQL provides the ability to abstract away a lot of the manual work you'd usually have to do during that process and lets you focus on the real important parts of your app! In the following, we'll discuss in a bit more detail what these tasks are.
 
 > There are two major GraphQL clients available at the moment. The first one is [Apollo Client](http://dev.apollodata.com/), which is a community-driven effort to build a powerful and flexible GraphQL client for all major development platforms. The second one is called [Relay](https://facebook.github.io/relay/) and it is Facebook's homegrown GraphQL client that heavily optimizes for performance and is only available on the web.  
 
@@ -31,7 +31,7 @@ When you previously used plain HTTP (like `fetch` in Javascript or `NSURLSession
 
 Once the server response was received and handled by the GraphQL client, the requested data somehow needs to end up in your UI. Depending on the platforms and frameworks you're developing with, there will be different approaches how UI updates are handled in general.
 
-Taking React as an example, GraphQL clients use the concept of [higher-order components](https://facebook.github.io/react/docs/higher-order-components.html) to fetch the needed data under the hood and make it available in the `props` of your components. In general, the declarative nature of GraphQL ties in particularly well with [functional reactive programming](https://en.wikipedia.org/wiki/Functional_reactive_programming) techniques. The two can form a powerful combination where a view simply declares its data dependencies and the UI is wired up with an FRP layer of your choice. 
+Taking React as an example, GraphQL clients use the concept of [higher-order components](https://facebook.github.io/react/docs/higher-order-components.html) to fetch the needed data under the hood and make it available in the `props` of your components. In general, the declarative nature of GraphQL ties in particularly well with [functional reactive programming](https://en.wikipedia.org/wiki/Functional_reactive_programming) (FRP) techniques. The two can form a powerful combination where a view simply declares its data dependencies and the UI is wired up with an FRP layer of your choice. 
 
 
 ### Caching Query Results: Concepts and Strategies
@@ -54,5 +54,5 @@ When the build environment has access to the schema, it can essentially parse al
 
 A powerful concept of GraphQL is that it allows you to have UI code and data requirements side-by-side. The tight coupling of views and their data dependencies greatly improves developer experience. The mental overhead of thinking about how the right data ends up in the right parts of the UI is eliminated.
 
-How well colocation works depends on the platform you're developing on. For example in Javascript applications, it's possible to actually put data dependencies and UI code into the same file. In Xcode, the _Assistant Editor_ can be used to work on view controllers and graphql code at the same time. 
+How well colocation works depends on the platform you're developing on. For example in Javascript applications, it's possible to actually put data dependencies and UI code into the same file. In Xcode, the _Assistant Editor_ can be used to work on view controllers and GraphQL code at the same time. 
 
